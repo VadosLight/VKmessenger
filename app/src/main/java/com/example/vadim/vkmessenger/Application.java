@@ -8,6 +8,7 @@ import com.vk.sdk.VKSdk;
 
 public class Application extends android.app.Application {
 
+    //Проверяем токен на корректность
     VKAccessTokenTracker vkAccessTokenTracker = new VKAccessTokenTracker() {
         @Override
         public void onVKAccessTokenChanged(@Nullable VKAccessToken oldToken, @Nullable VKAccessToken newToken) {
@@ -23,7 +24,9 @@ public class Application extends android.app.Application {
     public void onCreate(){
         super.onCreate();
 
+        //Не особо важная функция, но она позволяет правильно работать при неправильном токене
         vkAccessTokenTracker.startTracking();
+
         VKSdk.initialize(this);
     }
 }

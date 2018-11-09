@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         if (!VKSdk.onActivityResult(requestCode, resultCode, data, object : VKCallback<VKAccessToken> {
                 override fun onResult(res: VKAccessToken) {
                     //Пользователь успешно авторизовался
+                    val intent = Intent(this@MainActivity, Main_Menu::class.java)
+                    startActivity(intent)
                 }
                 override fun onError(error: VKError) {
                     //Пользователь пошел нахуй или решил нажать "ОТМЕНА"

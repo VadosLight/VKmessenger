@@ -28,15 +28,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        Timber.tag("VKAccessToken")
         if (!VKSdk.onActivityResult(requestCode, resultCode, data, object : VKCallback<VKAccessToken> {
                 override fun onResult(res: VKAccessToken) {
-                    Timber.d(res.accessToken)
+                    //Пользователь успешно авторизовался
                 }
                 override fun onError(error: VKError) {
-                    Timber.d("code: %s, message: %s", error.errorCode.toString(), error.errorMessage)
+                    //Пользователь пошел нахуй или решил нажать "ОТМЕНА"
                 }
             }))
-        super.onActivityResult(requestCode, resultCode, data)
+                super.onActivityResult(requestCode, resultCode, data)
     }
 }

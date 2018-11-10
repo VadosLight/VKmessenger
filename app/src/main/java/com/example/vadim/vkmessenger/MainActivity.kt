@@ -3,6 +3,7 @@ package com.example.vadim.vkmessenger
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
@@ -44,5 +45,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }))
                 super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    fun btn_Friends_Click(view: View){
+        val intent = Intent(this@MainActivity, Friends_Screen::class.java)
+        startActivity(intent)
     }
 }

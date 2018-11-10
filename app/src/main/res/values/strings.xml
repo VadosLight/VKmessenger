@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">VK messenger</string>
+    <string name="close_app">Close App</string>
+    <string name="news">News</string>
+    <string name="dialogs">Dialogs</string>
+    <string name="friends">Friends</string>
     <integer name="com_vk_sdk_AppId">6747015</integer>
 </resources>

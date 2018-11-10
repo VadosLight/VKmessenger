@@ -4,8 +4,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">#ffffff</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/vk_share_gray_line</item>
     </style>
 
     <style name="Button" parent="@style/Base.TextAppearance.AppCompat.Button">

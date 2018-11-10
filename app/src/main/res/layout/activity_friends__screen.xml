@@ -8,4 +8,8 @@
         tools:context=".Friends_Screen"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
+    <ListView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/listView"
+                android:theme="@style/ListViewColor"/>
 </android.support.constraint.ConstraintLayout>

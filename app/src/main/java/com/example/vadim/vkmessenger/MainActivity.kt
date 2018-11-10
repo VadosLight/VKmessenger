@@ -42,6 +42,8 @@ class MainActivity : AppCompatActivity() {
                 }
                 override fun onError(error: VKError) {
                     //Пользователь пошел нахуй или решил нажать "ОТМЕНА"
+                    finish()
+                    System.exit(0)
                 }
             }))
                 super.onActivityResult(requestCode, resultCode, data)

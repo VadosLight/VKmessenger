@@ -13,5 +13,7 @@
         <!--Добавить стиль для всех кнопок -->
     </style>
 
-
+<style name="ListViewColor" parent="Base.Widget.AppCompat.ListView">
+    <item name="android:colorBackground">#000000</item>
+</style>
 </resources>

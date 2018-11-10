@@ -55,9 +55,8 @@ class MainActivity : AppCompatActivity() {
         System.exit(0)
     }
 
-    fun btn_Dialog_Click(view: View){
-        val intent = Intent(this@MainActivity, Dialog_Screen::class.java)
-        startActivity(intent)
-    }
+
+
+
 
 }

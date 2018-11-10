@@ -3,6 +3,8 @@ package com.example.vadim.vkmessenger
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Toast
 import com.vk.sdk.VKAccessToken
 import com.vk.sdk.VKCallback
@@ -17,6 +19,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         setContentView(R.layout.activity_main)
 
         VKSdk.login(this,
@@ -31,8 +37,7 @@ class MainActivity : AppCompatActivity() {
         if (!VKSdk.onActivityResult(requestCode, resultCode, data, object : VKCallback<VKAccessToken> {
                 override fun onResult(res: VKAccessToken) {
                     //Пользователь успешно авторизовался
-                    val intent = Intent(this@MainActivity, Main_Menu::class.java)
-                    startActivity(intent)
+
                 }
                 override fun onError(error: VKError) {
                     //Пользователь пошел нахуй или решил нажать "ОТМЕНА"

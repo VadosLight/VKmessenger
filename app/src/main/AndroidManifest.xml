@@ -28,8 +28,7 @@
         <activity android:name=".Friends_Screen">
         </activity>
 
-        <activity android:name=".Dialog_Screen">
-        </activity>
+
     </application>
 
 </manifest>

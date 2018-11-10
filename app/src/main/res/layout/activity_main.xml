@@ -25,6 +25,7 @@
             app:layout_constraintEnd_toStartOf="@+id/space" android:layout_marginEnd="8dp"/>
     <Button
             android:text="@string/dialogs"
+            android:onClick="btn_Dialog_Click"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/btn_dialogs" app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +45,7 @@
     <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
                                           android:id="@+id/guideline" app:layout_constraintGuide_begin="20dp"
                                           android:orientation="vertical"/>
+
     <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
                                           android:id="@+id/guideline2" app:layout_constraintGuide_begin="20dp"
                                           android:orientation="vertical"/>

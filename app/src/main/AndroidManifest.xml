@@ -24,7 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".Friends_Screen">
+        </activity>
+
+        <activity android:name=".Dialog_Screen">
         </activity>
     </application>
 

@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestWindowFeature(Window.FEATURE_NO_TITLE)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         setContentView(R.layout.activity_main)
@@ -53,6 +53,11 @@ class MainActivity : AppCompatActivity() {
     fun btn_CloseApp_Click(view: View){
         finish()
         System.exit(0)
+    }
+
+    fun btn_Dialog_Click(view: View){
+        val intent = Intent(this@MainActivity, Dialog_Screen::class.java)
+        startActivity(intent)
     }
 
 }

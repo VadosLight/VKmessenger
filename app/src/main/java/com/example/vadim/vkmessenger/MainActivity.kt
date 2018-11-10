@@ -1,19 +1,16 @@
 package com.example.vadim.vkmessenger
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import android.widget.Toast
 import com.vk.sdk.VKAccessToken
 import com.vk.sdk.VKCallback
 import com.vk.sdk.VKScope
 import com.vk.sdk.VKSdk
 import com.vk.sdk.api.VKError
-import com.vk.sdk.util.VKUtil
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -38,10 +35,9 @@ class MainActivity : AppCompatActivity() {
         if (!VKSdk.onActivityResult(requestCode, resultCode, data, object : VKCallback<VKAccessToken> {
                 override fun onResult(res: VKAccessToken) {
                     //Пользователь успешно авторизовался
-
                 }
                 override fun onError(error: VKError) {
-                    //Пользователь пошел нахуй или решил нажать "ОТМЕНА"
+                    //Пользователь решил нажать "ОТМЕНА"
                     finish()
                     System.exit(0)
                 }
@@ -53,4 +49,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this@MainActivity, Friends_Screen::class.java)
         startActivity(intent)
     }
+
+    fun btn_CloseApp_Click(view: View){
+        finish()
+        System.exit(0)
+    }
+
 }

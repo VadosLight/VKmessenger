@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             VKScope.NOTIFICATIONS,
             VKScope.WALL,
             VKScope.OFFLINE)
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

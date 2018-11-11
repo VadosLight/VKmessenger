@@ -100,7 +100,7 @@ public class Dialog_Screen extends AppCompatActivity {
     }
 
     private void speakPage() {
-        String text = "Страница друзья";
+        String text = "Диалог";
         Float pitch = (float)1;
         Float speed = (float)1;
 

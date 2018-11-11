@@ -50,13 +50,14 @@ public class Friends_Screen extends Activity{
                 speak();
             }
         });
-        speakPage();
+
+        speakPage("Страница друзья");
         }
 
     @Override
     protected void onStart(){
         super.onStart();
-        speakPage();
+        speakPage("Страница друзья");
     }
 
     public void getSpeechInput(View view){
@@ -97,8 +98,8 @@ public class Friends_Screen extends Activity{
         mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
-    private void speakPage() {
-        String text = "Страница друзья";
+    private void speakPage(String text) {
+
         Float pitch = (float)1;
         Float speed = (float)1;
 
@@ -110,6 +111,7 @@ public class Friends_Screen extends Activity{
 
     public void Back_onClick(View view){
         onBackPressed();
+        speakPage("Главное меню");
     }
 
 

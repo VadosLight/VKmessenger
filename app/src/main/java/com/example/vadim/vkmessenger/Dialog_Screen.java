@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.vk.sdk.api.*;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -113,4 +114,29 @@ public class Dialog_Screen extends AppCompatActivity {
         onBackPressed();
     }
 
+    public void txtView_msg_onClick(View view){
+        txtResult = (TextView) findViewById(R.id.txtView_msg);
+        String msg = (String) txtResult.getText();
+
+
+        VKRequest request = new VKRequest("messages.send", VKParameters.from(VKApiConst.USER_ID, 7596910,
+                VKApiConst.MESSAGE, msg));
+
+        request.executeWithListener(new VKRequest.VKRequestListener() {
+            @Override
+            public void onComplete(VKResponse response) {
+                super.onComplete(response);
+            }
+
+            @Override
+            public void attemptFailed(VKRequest request, int attemptNumber, int totalAttempts) {
+                super.attemptFailed(request, attemptNumber, totalAttempts);
+            }
+
+            @Override
+            public void onError(VKError error) {
+                super.onError(error);
+            }
+        });
+    }
 }

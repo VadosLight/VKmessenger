@@ -44,8 +44,6 @@ public class Friends_Screen extends Activity{
                 if( data!=null){
                     ArrayList<String> result =  data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     txtResult.setText(result.get(0));
-                    String rlllllll = result.get(0);
-
                 }
                 break;
         }

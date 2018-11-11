@@ -5,7 +5,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Friends_Screen"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+>
 
     <android.support.constraint.Guideline
             android:orientation="vertical"
@@ -24,7 +25,8 @@
             app:layout_constraintTop_toTopOf="@+id/guideline4" android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="@+id/guideline3"
-            android:layout_marginStart="8dp"/>
+            android:layout_marginStart="8dp"
+    />
     <TextView
 
             android:layout_width="0dp"
@@ -37,6 +39,7 @@
             android:textAllCaps="false" android:background="@color/vk_grey_color" android:textSize="24sp"/>
     <ImageButton
             android:src="@android:drawable/ic_media_rew"
+            android:onClick="Back_onClick"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:id="@+id/btn_Back" app:layout_constraintStart_toStartOf="parent"

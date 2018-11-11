@@ -57,7 +57,10 @@ class MainActivity : AppCompatActivity() {
         System.exit(0)
     }
 
-
+    fun btn_Dialogs_Click(view: View){
+        val intent = Intent(this@MainActivity, TestSpeach::class.java)
+        startActivity(intent)
+    }
 
 
 

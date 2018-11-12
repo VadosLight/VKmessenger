@@ -27,7 +27,7 @@ public class Friends_Screen extends Activity{
         txtResult = (TextView) findViewById(R.id.txtView_Name_User);
         mButtonSpeak = findViewById(R.id.btn_Read);
 
-        speakPage("Страница друзья");
+
 
         mTTS = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
@@ -52,12 +52,14 @@ public class Friends_Screen extends Activity{
                 speak();
             }
         });
+
+        speakPage();
     }
 
     @Override
     protected void onStart(){
         super.onStart();
-        speakPage("Страница друзья");
+        speakPage();
     }
 
     public void getSpeechInput(View view){
@@ -98,8 +100,8 @@ public class Friends_Screen extends Activity{
         mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
-    public void speakPage(String text) {
-
+    public void speakPage() {
+        String text = "Страница друзья";
         Float pitch = (float)1;
         Float speed = (float)1;
 
